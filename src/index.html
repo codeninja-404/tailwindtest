@@ -6,46 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind test with raw html</title>
     <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://kit.fontawesome.com/ff45585129.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-green-100">
-
+<body class="bg-gray-900/60">
     <header class="header-container">
+
         <div class="nav-container">
-            <nav class="space-x-4">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Services</a>
-                <a href="#" class="nav-link">Contact</a>
+            <nav class="w-full flex justify-between md:justify-end">
+                <button class="md:hidden text-white text-2xl " onclick="w3_open()">&#9776;</button>
+                <a href="#"
+                    class="nav-link w-10 h-10 p-2 rounded-full border-4 bg-white flex justify-center items-center">
+                    <i class="fa-solid fa-user"></i>
+                </a>
             </nav>
         </div>
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#" class="sidebar-link">Dashboard</a></li>
-                <li><a href="#" class="sidebar-link">Profile</a></li>
-                <li><a href="#" class="sidebar-link">Settings</a></li>
-                <li><a href="#" class="sidebar-link">Logout</a></li>
+        <aside class="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white md:block hidden">
+
+            <ul class="mt-10">
+                <li><a href="#" class="sidebar-link block px-4 py-2">Dashboard</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Profile</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Settings</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Logout</a></li>
+            </ul>
+        </aside>
+        <aside class="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white  hidden" id="mySidebar">
+            <div class="flex justify-end md:hidden">
+                <button class="w3-bar-item border-2 px-[.65rem] py-0 rounded-full w3-button w3-large text-2xl"
+                    onclick="w3_close()">&times;</button>
+            </div>
+            <ul class="mt-10">
+                <li><a href="#" class="sidebar-link block px-4 py-2">Dashboard</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Profile</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Settings</a></li>
+                <li><a href="#" class="sidebar-link block px-4 py-2">Logout</a></li>
             </ul>
         </aside>
     </header>
-    <main class=" pt-20">
-        <div class="section">
+    <main class="pt-20  md:ml-64" onclick="w3_close()">
+        <div class="section-2">
             <div class="box">hello</div>
             <div class="box"></div>
         </div>
-        <div class="section">
+        <div class="section-3">
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <div class="section">
+        <div class="section-3">
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
         </div>
-
     </main>
-    <footer class=" h-10 bg-green-500 ml-80 mr-4">12</footer>
+    <footer class="md:ml-64 ">
+        <div class="h-10 bg-[#3d3d3d] rounded-md m-4 p-2 text-white">
+            <p>Footer</p>
+        </div>
+    </footer>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
