@@ -30,7 +30,8 @@
                 <li><a href="#" class="sidebar-link block px-4 py-2">Logout</a></li>
             </ul>
         </aside>
-        <aside class="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white  hidden" id="mySidebar">
+        <aside class="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white -translate-x-full transform transition-transform duration-300
+        " id="mySidebar">
             <div class="flex justify-end md:hidden">
                 <button class="w3-bar-item border-2 px-[.65rem] py-0 rounded-full w3-button w3-large text-2xl"
                     onclick="w3_close()">&times;</button>
@@ -45,18 +46,21 @@
     </header>
     <main class="pt-20  md:ml-64" onclick="w3_close()">
         <div class="section-2">
-            <div class="box">hello</div>
-            <div class="box"></div>
+            <div class="box1">hello</div>
+            <div class="box1"></div>
+        </div>
+        <div class="section-3 ">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
         </div>
         <div class="section-3">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="section-3">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box3 imgbg"></div>
+            <div class="box3 imgbg"></div>
+            <div class="box3 imgbg">
+                <img class="size-full object-cover"
+                    src="https://cdn.pixabay.com/photo/2019/09/24/06/10/insect-4500348_1280.jpg" alt="">
+            </div>
         </div>
     </main>
     <footer class="md:ml-64 ">
@@ -66,13 +70,20 @@
     </footer>
     <script>
         function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
+            const sidebar = document.getElementById("mySidebar");
+            sidebar.classList.remove("-translate-x-full");
+            sidebar.classList.add("translate-x-0");
         }
 
         function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
+            const sidebar = document.getElementById("mySidebar");
+            sidebar.classList.remove("translate-x-0");
+            sidebar.classList.add("-translate-x-full");
         }
     </script>
+
+
+
 </body>
 
 </html>

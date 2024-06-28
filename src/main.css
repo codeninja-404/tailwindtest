@@ -4,7 +4,7 @@
 
 @layer components {
   .header-container {
-    @apply mb-20 fixed w-screen h-20;
+    @apply mb-20 fixed w-screen h-20 z-40;
   }
   .nav-container {
     @apply w-screen mx-auto flex justify-end items-center px-10 py-2 bg-gray-800  shadow-lg shadow-[#0000006e];
@@ -21,11 +21,38 @@
 }
 
 .section-2 {
-  @apply lg:flex gap-4;
+  @apply lg:flex gap-4 m-2;
 }
 .section-3 {
-  @apply md:flex gap-4;
+  @apply md:flex flex-wrap gap-2 m-2;
 }
-.box {
-  @apply flex-1 h-60  m-4 rounded-md p-2 bg-black text-white;
+.box1 {
+  @apply flex-1 h-60   rounded-md my-2 p-2 bg-black text-white;
+}
+.box2 {
+  @apply mx-auto h-[500px] md:w-[395px] my-2 rounded-md p-2 bg-red-900 text-white;
+}
+.box3 {
+  @apply mx-auto h-[500px] md:w-[395px] my-2 rounded-md p-2 bg-gray-800 text-white;
+}
+
+/* .imgbg {
+  @apply bg-center bg-no-repeat transition duration-500 ease-in-out hover:bg-[url('https://cdn.pixabay.com/photo/2016/08/18/11/50/butterfly-1602726_640.png')];
+  background-size: 50%;
+} */
+
+.imgbg {
+  @apply relative bg-center bg-no-repeat transition duration-500 ease-in-out;
+  background-size: 50%;
+}
+
+.imgbg::before {
+  content: "";
+  @apply absolute inset-0 bg-center bg-no-repeat transition-opacity duration-500 ease-in-out opacity-0;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/18/11/50/butterfly-1602726_640.png");
+  background-size: 50%;
+}
+
+.imgbg:hover::before {
+  @apply opacity-50;
 }
