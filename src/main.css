@@ -2,23 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-btn {
-  @apply px-5 py-1 rounded-md  transition-colors duration-300 ease-in-out;
+@layer components {
+  .header-container {
+    @apply mb-20 fixed w-screen h-20;
+  }
+  .nav-container {
+    @apply w-screen mx-auto flex justify-end items-center px-10 py-4 bg-white shadow-lg;
+  }
+  .nav-link {
+    @apply hover:underline;
+  }
+  .sidebar {
+    @apply bg-white text-black w-72 h-screen p-4;
+  }
+  .sidebar-link {
+    @apply mb-4 hover:underline;
+  }
 }
 
-.main {
-  @apply flex justify-center gap-6 mt-32 mx-auto font-extrabold;
+.section {
+  @apply md:flex gap-4 ml-[19rem];
 }
-
-.warning {
-  @apply bg-red-700 hover:bg-red-900;
-}
-.success {
-  @apply bg-green-700 hover:bg-green-900;
-}
-.blah1 {
-  @apply bg-blue-400 hover:bg-blue-900;
-}
-.blah2 {
-  @apply bg-gray-500 hover:bg-gray-700;
+.box {
+  @apply flex-1 h-60 bg-red-400 m-4;
 }

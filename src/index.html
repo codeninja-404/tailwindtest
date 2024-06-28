@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind test with raw html</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="main">
-    
-    <button class="custom-btn warning">BTN 1</button>
-    <button class="custom-btn success">BTN 2</button>
-    <button class="custom-btn blah1">BTN 3</button>
-    <button class="custom-btn blah2">BTN 4</button>
+
+<body class="bg-green-100">
+
+    <header class="header-container">
+        <div class="nav-container">
+            <nav class="space-x-4">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+        </div>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" class="sidebar-link">Dashboard</a></li>
+                <li><a href="#" class="sidebar-link">Profile</a></li>
+                <li><a href="#" class="sidebar-link">Settings</a></li>
+                <li><a href="#" class="sidebar-link">Logout</a></li>
+            </ul>
+        </aside>
+    </header>
+    <main class=" pt-20">
+        <div class="section">
+            <div class="box">hello</div>
+            <div class="box"></div>
+        </div>
+        <div class="section">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="section">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </main>
+    <footer class=" h-10 bg-green-500 ml-80 mr-4">12</footer>
 </body>
+
 </html>
